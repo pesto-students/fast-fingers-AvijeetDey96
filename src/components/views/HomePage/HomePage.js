@@ -2,7 +2,9 @@ import React,{Component} from 'react';
 import './Home.css'
 import keyboard from "../../../assets/keyboard.svg";
 import play from "../../../assets/Icon-awesome-play.svg";
-import useHomeState from '../../../hooks/useHomeState.js'
+import { useHistory } from "react-router-dom";
+
+// import useHomeState from '../../../hooks/useHomeState.js'
 // const HomePage = () => {
 // const [value,handleChange,reset] = useHomeState("")
 // const data =(v) =>{
@@ -28,6 +30,7 @@ import useHomeState from '../../../hooks/useHomeState.js'
 // }
 
 class HomePage extends Component{
+  
   constructor(props){
     super(props)
     this.state = {
@@ -39,14 +42,16 @@ class HomePage extends Component{
     this.handleSubmit =this.handleSubmit.bind(this);
   }
   handleChange(evt){
-    console.log('evt',evt);
-    this.setState({
+     this.setState({
       [evt.target.name]:evt.target.value
     });
   }  
   handleSubmit(evt){
+ 
    evt.preventDefault();
+     
    localStorage.setItem('userData',JSON.stringify(this.state))
+   this.props.history.push("/game")
   }  
   render(){
     return(
