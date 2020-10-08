@@ -1,7 +1,7 @@
  
 .Group-243 {
     width: 100%;
-    height: 1080px;
+    height: 800px;
     object-fit: contain;
     /* opacity: 0.49; */
     /* background: url('../../../assets/group-243.png'); */
@@ -70,27 +70,27 @@
     text-align: center;
   }
   .Rectangle-5 {
-    width: 456px;
+    /* width: 456px; */
     height: 60px;
     border-radius: 15px;
     box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
     border: solid 1px #ffffff;
     margin-top: 10px;
-    font-size: 33px;
     background-color: transparent;
     color: #515353;
     padding-left: 10px;
     font-family: Breamcatcher;
-    font-size: 33px;
+    font-size: 22px;
     color: #032228;
   }
   
   .Rectangle-6 {
-    width: 600px;
-    height: 149px;
-    opacity: 0.59;
+    /* width: 600px; */
+    /* height: 149px; */
+    /* opacity: 0.59; */
     box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
     background-color: #ffffff;
+    font-size: 22px;
   }
   .start-game {
      height: 48px;

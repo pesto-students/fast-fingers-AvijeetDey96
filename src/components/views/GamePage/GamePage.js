@@ -37,10 +37,24 @@ class GamePage extends Component {
         <div className="row">
           <div className="col-3 board">
             <div className="Rectangle-10">
-              <p>Score Board</p>
-            voard</div>
+              <p className="SCORE-BOARD">Score Board</p>
+
+            <br/>
+            <div>
+<p className="Game-1-114">
+  Game 1  : 1:14
+</p>
+<p className="Game-1-114">
+  Game 2  : 1:14
+</p>
+<p className="Game-1-114">
+  Game 3  : 1:14
+</p>
+
             </div>
-          <div className="col-9">dadadd</div>
+             </div>
+            </div>
+          <div className="col-9"> </div>
 
         </div>
         

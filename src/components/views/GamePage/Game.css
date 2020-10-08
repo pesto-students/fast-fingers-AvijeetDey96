@@ -156,15 +156,28 @@
     padding:0px !important;
   }
   .SCORE-BOARD {
-    width: 222px;
     height: 30px;
     font-family: Gotham;
-    font-size: 30px;
+    font-size: 23px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.2;
     letter-spacing: normal;
-    text-align: left;
+    text-align: center;
     color: #ff5155;
+    padding-top: 15px;
+  }
+  .Game-1-114 {
+  
+    height: 30px;
+    font-family: Gotham;
+    font-size: 21px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
   }
