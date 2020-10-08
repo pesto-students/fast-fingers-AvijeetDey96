@@ -1,20 +1,14 @@
  
 .Group-243 {
     width: 100%;
-    height: 1080px;
+    height: 800px;
     object-fit: contain;
     /* opacity: 0.49; */
     /* background: url('../../../assets/group-243.png'); */
-    background-color: #020707
+    background-color: #020707;
+    padding: 3% !important;
 }
-
-.Icon-awesome-keyboard {
-    width: 137.2px;
-    height: 156.1px;
-    /* opacity: 0.64; */
-    background-color: var(--light-red);
-    margin-top: 5%;
-}
+ 
 .fast-fingers {
     width: 396px;
     height: 81px;
@@ -112,4 +106,65 @@
     height: 41.4px; */
     box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.16);
     background-color: var(--light-red);
+  }
+  .Icon-material-person {
+  
+    object-fit: contain;
+    
+    float: left;
+  }
+  .Icon-awesome-gamepad {
+    
+    object-fit: contain;
+    
+    float: left;
+  }
+
+  .player_name_777 {
+    font-family: Breamcatcher;
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ff5155;
+    /* padding-left: 1%; */
+    margin: 0;
+  }
+
+  .fast-text {
+     
+    font-family: LaserCorpsGradient;
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: right;
+    color: #ff5155;
+  }
+  .Rectangle-10 {
+    width: 76%;
+    height: 494px;
+    border-radius: 15px;
+    border: solid 3px #ff5155;
+  }
+  .board{
+    padding:0px !important;
+  }
+  .SCORE-BOARD {
+    width: 222px;
+    height: 30px;
+    font-family: Gotham;
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ff5155;
   }
