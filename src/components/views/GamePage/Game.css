@@ -181,3 +181,29 @@
     text-align: center;
     color: #ffffff;
   }
+  .Group-249 {
+    height: 75%;
+    text-align: center;
+    object-fit: contain;
+    /* float: left; */
+  }
+  .Rectangle-9 {
+    width: 530px;
+    height: 74px;
+    opacity: 0.59;
+    border-radius: 15px;
+    box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
+    background-color: #ffffff;
+  }
+  .window {
+    text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+    font-family: Gotham;
+    font-size: 55px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+  }
