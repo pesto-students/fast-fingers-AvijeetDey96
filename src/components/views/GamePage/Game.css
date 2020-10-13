@@ -185,6 +185,7 @@
     height: 75%;
     text-align: center;
     object-fit: contain;
+    background: url('../../../assets/timer.svg');
     /* float: left; */
   }
   .Rectangle-9 {
@@ -194,6 +195,7 @@
     border-radius: 15px;
     box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
     background-color: #ffffff;
+    text-align: center;
   }
   .window {
     text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
@@ -207,3 +209,29 @@
     text-align: center;
     color: #ffffff;
   }
+
+  .stop-game {
+    /* width: 284px;
+    height: 48px; */
+    text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+    font-family: Gotham;
+    font-size: 33px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    
+    letter-spacing: normal;
+    text-align: left;
+    float: left;
+    color:  #ff5155;
+  }
+  .cross-image{
+    float: left;
+  }
+  .home-image{
+    float: right;
+  }
+  .countdown{
+    color: #ffffff;
+    font-size : 30px;
+   }
