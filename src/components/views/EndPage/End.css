@@ -1,0 +1,40 @@
+.SCORE-GAME-5 {
+    font-family: Gotham;
+    font-size: 50px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    /* line-height: 1.2; */
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+  }
+  .alignment{
+      text-align: center;
+      margin-top: 90px;
+  }
+  .score{
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+  }
+  .play-again {
+    text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+    font-family: Gotham;
+    font-size: 30px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ff5155;
+  }
+  .Icon-open-reload {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+  }
+  .align-play{
+    text-align: center;
+    margin-top: 45px;
+  }

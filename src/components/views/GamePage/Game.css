@@ -230,8 +230,10 @@
   }
   .home-image{
     float: right;
+    cursor: pointer;
   }
   .countdown{
     color: #ffffff;
-    font-size : 30px;
+    font-size : 50px;
+    font-weight: bolder;
    }

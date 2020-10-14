@@ -11,28 +11,50 @@ class GamePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      word:'',
-      typedName:''
+      word: [],
+      typedName: ''
     };
-this.getRandomArbitrary = this.getRandomArbitrary.bind(this);
-this.compareWord = this.compareWord.bind(this)
+    this.getRandomArbitrary = this.getRandomArbitrary.bind(this);
+    this.compareWord = this.compareWord.bind(this)
+    this.backToHome = this.backToHome.bind(this)
+  }
+
+  componentDidMount() {
+    var count = Object.keys(dictionary).length;
+    let number = Math.round(this.getRandomArbitrary(1, count));
+    console.log(count, number, dictionary[number]);
+    // this.setState({
+    //   word: dictionary[number]
+    // })
+
+    for (let i = 0; i < dictionary[number].length; i++) {
+      console.log('let', dictionary[number].charAt(i))
+      let letter = {
+        letter: dictionary[number].charAt(i),
+        color: '#ffffff'
+      }
+      this.state.word.push(letter)
+    
+      
+    }
+   
   }
   getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
   }
-  componentDidMount() {
-    var count = Object.keys(dictionary).length;
-     let number = Math.round(this.getRandomArbitrary(1,count));
-     this.setState({
-      word:dictionary[number]
+  compareWord(evt) {
+    this.setState({
+      typedName: evt.target.value
     })
+    console.log(this.state.typedName)
   }
-  compareWord(evt){
-console.log('evt',evt)
+  backToHome(evt) {
+    alert("are you really want to quite?")
+    this.props.history.push("/home")
   }
   render() {
-    const { word,typedName } = this.state;
-    const Timer =() =>{
+    const { word, typedName } = this.state;
+    const Timer = () => {
     }
     const data = JSON.parse(localStorage.getItem('userData'))
 
@@ -77,15 +99,21 @@ console.log('evt',evt)
             <div className="col-9">
               <div className="row">
                 <div className="col-4"></div>
-
                 <div className="col-4"><img src={timer} /><span className="Group-249" ><p className="countdown">2:14</p> </span > </div>
                 <div className="col-4"></div>
-    <div className="col-12"><p className="window">{word}</p> </div>
-                <div className="col-12"><input name="words" onChange={this.compareWord}  value={this.state.typedName}  className="Rectangle-9" type="text"/> </div>
+                <div className="col-12"><p className="window"> 
+                 {this.state.word.map((data, index) => (
+               
+                    <h3 key={index}>{data.letter}</h3>
+               
+                ))} 
+                
+                
+                </p> </div>
+                <div className="col-12"><input type="text" onChange={this.compareWord} value={typedName} className="Rectangle-9" type="text" /> </div>
               </div>
-
             </div>
-  <div className="col-12" ><img className="cross-image" src={cross} /> <p className="stop-game">STOP GAME</p> <img className="home-image" src={home} /> </div>
+            <div className="col-12" ><img className="cross-image" src={cross} /> <p className="stop-game">STOP GAME</p> <img onClick={this.backToHome} className="home-image" src={home} /> </div>
           </div>
 
         </div>
