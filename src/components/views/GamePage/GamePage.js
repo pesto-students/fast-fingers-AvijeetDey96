@@ -7,7 +7,9 @@ import timer from "../../../assets/timer.svg";
 import cross from "../../../assets/metro-cross.svg";
 import home from "../../../assets/awesome-home.svg";
 import dictionary from "../../../data/dictionary.json"
+import TimerCircle from './Timer'
 const log = console.log
+
 const GamePage = () => {
   const [count, setCount] = useState(0);
   const [word, setWord] = useState("");
@@ -18,6 +20,8 @@ const GamePage = () => {
   useEffect(() => {
     fetchDictionary()
     return () => console.log('unmounting...');
+    
+     
   }, []);
 
   useEffect(() => {
@@ -25,13 +29,13 @@ const GamePage = () => {
   })
 
   const fetchDictionary = () => {
-    
+
     let count = Object.keys(dictionary).length;
     let number = Math.round(getRandomArbitrary(1, count));
     console.log(count, number, dictionary[number]);
     setWord(dictionary[number]);
     for (let i = 0; i < dictionary[number].length; i++) {
-      console.log('let', dictionary[number].charAt(i)) 
+      console.log('let', dictionary[number].charAt(i))
       let letter = {
         letter: dictionary[number].charAt(i),
         color: '#ffffff'
@@ -50,21 +54,37 @@ const GamePage = () => {
   const getRandomArbitrary = (min, max) => {
     return Math.random() * (max - min) + min;
   }
- 
-  const compareWord =  (evt) => {
+
+  const compareWord = (event) => {
     log('typedInput', typedName, typedName.length)
     wordLetterArray = [...wordArray]
+    const key = event.keyCode || event.charCode;
+    log('key', key)
     for (let i = 0; i < typedName.length; i++) {
       if (word.charAt(i) === typedName.charAt(i)) {
-      
-       wordLetterArray[i].color = '#54ba18'
-     }
-     else{
-       wordLetterArray[i].color = '#445298'
-     }
-   }
+
+        wordLetterArray[i].color = '#54ba18'
+
+      }
+      else {
+        wordLetterArray[i].color = '#445298'
+      }
+    }
     setWordArray(wordLetterArray)
   }
+
+ 
+const formatTime = (time) =>{
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+ 
   return (
 
     <div className="Group-243" >
@@ -111,7 +131,13 @@ const GamePage = () => {
           <div className="col-9">
             <div className="row">
               <div className="col-4"></div>
-              <div className="col-4"><img src={timer} /><span className="Group-249" ><p className="countdown">2:14</p> </span > </div>
+              <div className="col-4">
+
+                {/* <img src={timer} /><span className="Group-249" > </span >  */}
+                <TimerCircle><p className="countdown">2:14</p></TimerCircle>
+
+
+              </div>
               <div className="col-4"></div>
               <div className="col-12"><p className="window">
                 {wordArray.map((data, index) => (
@@ -122,7 +148,7 @@ const GamePage = () => {
 
               </p> </div>
 
-              <div className="col-12"><input type="text"  name="typedName" onKeyUp={compareWord}  onChange={(event)=>setTypedName(event.target.value)} value={typedName} className="Rectangle-9" type="text" /> </div>
+              <div className="col-12"><input type="text" name="typedName" onKeyUp={compareWord} onChange={(event) => setTypedName(event.target.value)} value={typedName} className="Rectangle-9" type="text" /> </div>
             </div>
           </div>
           <div className="col-12" ><img className="cross-image" src={cross} /> <p className="stop-game">STOP GAME</p> <img onClick={backToHome} className="home-image" src={home} /> </div>
@@ -135,6 +161,8 @@ const GamePage = () => {
 
 
 export default GamePage;
+
+
 
 // class GamePage extends Component {
 //   constructor(props) {
