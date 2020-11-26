@@ -80,21 +80,22 @@
     border: solid 1px #ffffff;
     margin-top: 10px;
     background-color: transparent;
-    color: #515353;
     padding-left: 10px;
     font-family: Breamcatcher;
     font-size: 25px!important;
-    color: white;
+    /* color: white; */
   }
   
   .Rectangle-6 {
-    /* width: 600px; */
-    /* height: 149px; */
-    /* opacity: 0.59; */
     box-shadow: 0 3px 16px 0 rgba(0, 0, 0, 0.8);
     background-color: #ffffff;
     font-size: 22px;
+    color: #032228;
   }
+  .levelname{
+    color: #97a5a7 !important;
+  }
+
   .start-game {
      height: 48px;
     text-shadow: 0 0 16px rgba(0, 0, 0, 0.16);

@@ -38,8 +38,8 @@ class HomePage extends Component {
           <form onSubmit={this.handleSubmit}>
             <div className="row;fast-div"><input type="text" name="userName" placeholder="TYPE YOUR NAME" value={this.state.name} onChange={this.handleChange} required className="Rectangle-2" /></div>
             <div className="row;fast-div">
-              <select name="mode" value={this.state.mode} onChange={this.handleChange} required className="Rectangle-5">
-                <option className="Rectangle-6" hidden value="">DIFFICULTY LEVEL</option>
+              <select name="mode" value={this.state.mode} onChange={this.handleChange} required className="Rectangle-5 levelname">
+                <option className="Rectangle-6 " hidden value="">DIFFICULTY LEVEL</option>
                 <option className="Rectangle-6" value="Easy">Easy</option>
                 <option className="Rectangle-6" value="Medium">Medium</option>
                 <option className="Rectangle-6" value="Hard">Hard</option>

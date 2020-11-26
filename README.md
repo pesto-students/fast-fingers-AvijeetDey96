@@ -81,4 +81,4 @@ Zeplin App Link: zpl://project?pid=5f75f13621f33094313f2b94
 
 
 ## APP Link
-https://relaxed-cori-2c24f4.netlify.app/
+https://master.dj5fwmvbxy50x.amplifyapp.com/home
