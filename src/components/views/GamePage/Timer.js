@@ -18,15 +18,20 @@ const COLOR_CODES = {
   }
 };
 
-const TIME_LIMIT = 20;
+let TIME_LIMIT = 0;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
 
-const TimerCircle =() =>{
+const TimerCircle =(props) =>{
+  TIME_LIMIT = props.limit
+  React.useEffect(() => {
+    startTimer();
+  },[])
+  
 
-startTimer();
+
 
 function onTimesUp() {
   clearInterval(timerInterval);
@@ -110,7 +115,7 @@ return (
         ></path>
       </g>
     </svg>
-    <span id="base-timer-label" class="base-timer__label">${formatTime(
+    <span id="base-timer-label" class="base-timer__label">{formatTime(
       timeLeft
     )}</span>
   </div></>

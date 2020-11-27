@@ -12,7 +12,7 @@ import Stopwatch from './Stopwatch'
 const log = console.log
 
 const GamePage = () => {
-  const [count, setCount] = useState(0);
+  const [wordCount, setWordCount] = useState(0);
   const [word, setWord] = useState("");
   const [wordArray, setWordArray] = useState([]);
   const [typedName, setTypedName] = useState("");
@@ -22,7 +22,7 @@ const GamePage = () => {
   useEffect(() => {
     fetchDictionary()
     return () => console.log('unmounting...');
-    callbackFunction()
+    // callbackFunction()
 
   }, []);
 
@@ -45,7 +45,7 @@ const GamePage = () => {
       wordLetterArray.push(letter)
 
     }
-    console.log("data ", wordLetterArray)
+    setWordCount(wordLetterArray.length)
     setWordArray(wordLetterArray)
   }
   const backToHome = (evt) => {
@@ -131,7 +131,7 @@ const GamePage = () => {
               <div className="col-4">
 
                 <div className="timerCircle">
-                  <TimerCircle> </TimerCircle>
+                  <TimerCircle limit={wordCount}> </TimerCircle>
 
                 </div>
 
